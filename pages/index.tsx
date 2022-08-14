@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { IoAddOutline } from 'react-icons/io5'
 import RecipeCard from '../components/recipeCard'
 import styles from '../styles/Home.module.css'
+
 
 const Home: NextPage = () => {
   return (
@@ -17,10 +19,15 @@ const Home: NextPage = () => {
         <h1 className="text-3xl font-bold">
           Recettes manager
         </h1>
-        <p className="text-xl underline">
-          Liste des recettes :
-        </p>
-
+        <div className='flex flex-row items-center w-full justify-between'>
+          <p className="text-xl underline">
+            Liste des recettes :
+          </p>
+          <button className='text-sm flex flex-row items-center bg-lime-800 rounded m-2 p-2 text-white'>
+            <IoAddOutline />
+            <p>Ajouter une recette</p>
+          </button>
+        </div>
         <div className={styles.grid}>
           <RecipeCard />
           <RecipeCard />
