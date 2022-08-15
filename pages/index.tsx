@@ -23,10 +23,13 @@ const Home: NextPage = () => {
           <p className="text-xl underline">
             Liste des recettes :
           </p>
-          <button className='text-sm flex flex-row items-center bg-lime-800 rounded m-2 p-2 text-white'>
+          <a
+            className='text-sm flex flex-row items-center bg-lime-800 rounded m-2 p-2 text-white'
+            href='/createRecipe'
+          >
             <IoAddOutline />
             <p>Ajouter une recette</p>
-          </button>
+          </a>
         </div>
         <div className={styles.grid}>
           <RecipeCard />
